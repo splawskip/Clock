@@ -1,0 +1,61 @@
+:root {
+	--clr-white: #FFFFFF;
+	--clr-dark: #091921;
+	--clr-red: #FF0000;
+}
+
+.app-body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	background-color: var(--clr-dark);
+}
+
+.clock {
+	position: relative;
+	width: 350px;
+	height: 350px;
+	background-image: url('../images/clock.png');
+	background-position: center;
+	background-size: cover;
+	border: 5px solid var(--clr-dark);
+	border-radius: 50%;
+}
+
+.clock::before {
+	position: absolute;
+	top: 51%;
+	left: 50%;
+	width: 15px;
+	height: 15px;
+	content: '';
+	background-color: var(--clr-white);
+	border-radius: 50%;
+	transform: translate(-51%, -50%);
+}
+
+.clock__hand {
+	position: absolute;
+	top: 50%;
+	height: 5px;
+	background-color: var(--clr-white);
+	transform: rotate(90deg);
+	transform-origin: 100%;
+}
+
+.clock__hand--hour {
+	left: 20%;
+	width: 30%;
+}
+
+.clock__hand--minute {
+	left: 10%;
+	width: 40%;
+}
+
+.clock__hand--second {
+	left: 10%;
+	width: 40%;
+	height: 2.5px;
+	background-color: var(--clr-red);
+}
