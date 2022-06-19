@@ -1,0 +1,30 @@
+:root {
+	--clr-white: #FFFFFF;
+	--clr-black: #000000;
+}
+
+.app-body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+.clock {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-color: var(--clr-white);
+	border: 10px solid var(--clr-black);
+	border-radius: 100%;
+}
+
+.clock__hand {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	width: 45%;
+	height: 5px;
+	background-color: var(--clr-black);
+	transform: rotate(90deg);
+	transform-origin: 100%;
+}
